@@ -1,4 +1,446 @@
 /*
 Theme Name: My Theme
 Author: Daniel Pantea
+version: 0.0.1
 */
+@font-face {
+	font-family: LatoBlack;
+	src: url('fonts/Lato-Black.ttf');
+}
+@font-face {
+	font-family: LatoRegular;
+	src: url('fonts/Lato-Regular.ttf');
+}
+@font-face {
+	font-family: LatoBold;
+	src: url('fonts/Lato-Bold.ttf');
+}
+@font-face {
+	font-family: LatoHeavy;
+	src: url('fonts/Lato-Heavy.ttf');
+}
+.LH
+{
+  font-family: LatoHeavy;
+}
+.LBlack
+{
+  font-family: LatoBlack;
+}
+.LR
+{
+  font-family: LatoRegular;
+}
+.LBold
+{
+  font-family: LatoBold;
+}
+.left-absolute
+{
+  position: absolute;
+	top: 304px;
+	left: 90px;
+}
+.right-absolute
+{
+	position: absolute;
+	right: 77px;
+	top: 82px;
+}
+.center-absolute
+{
+	position: absolute;
+	top: 610px;
+	left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.header_bg
+{
+  background-image: url("images/headerbg_img.png");
+  padding-top: 23px;
+}
+.contactBtn
+{
+  text-transform: uppercase;
+  color:#305aa0;
+  background-color: white;
+  padding: 12px 29px;
+  display: inline-block;
+  text-align: center;
+	font-size: 16px;
+}
+.contactBtn:hover
+{
+  text-decoration: none;
+  color:#305aa0;
+}
+.headerTitle
+{
+  color: white;
+  font-size: 63px;
+  text-transform: uppercase;
+  line-height: 63px;
+  margin-top: 84px;
+
+}
+.headerSubTitle
+{
+  font-size: 33.5px;
+  color: #fcb23d;
+  text-transform: uppercase;
+  word-spacing: -2px;
+  letter-spacing: -0.12px;
+  line-height: 38px;
+  margin-right: -39px;
+  margin-bottom: 21px;
+}
+.headerInfoText
+{
+  color: white;
+  font-size: 16.01px;
+  line-height: 24.02px;
+  letter-spacing: -0.016px;
+
+}
+.inline
+{
+  display: inline;
+}
+.headerPhone
+{
+  color: white;
+  font-size: 18px;
+  vertical-align: top;
+
+}
+.headerPhone:hover
+{
+  text-decoration: none;
+  color: white;
+}
+.phoneContainer
+{
+  padding-top: 14px;
+}
+
+.formBg
+{
+  max-width: 344px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 66px;
+	margin-bottom: 73px;
+  height: 506px;
+  background-color:#eab745;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+	z-index: 2;
+}
+.z-2
+{
+	z-index: 2;
+}
+.formTitleBg
+{
+  background-color: #f0cd7d;
+  max-height: 120px;
+}
+.formTitle
+{
+  padding: 29px 85px 6px 85px;
+  font-size: 33.37px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #305aa0;
+}
+
+.formTitleUnderline
+{
+  height: 5px;
+  width: 90px;
+  background-color: #df9528;
+  vertical-align: bottom;
+}
+.formSubTitle
+{
+  font-size: 20px;
+  color: #305aa0;
+  padding: 9px 25px;
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+input
+{
+  font-size: 15px;
+  background-color: #f0cd7d;
+  border: none;
+  margin: 10px auto;
+  height: 40px;
+  width: 277px;
+  padding: 0px 11px;
+
+}
+input[type=submit]
+{
+  background-color: white;
+  font-family: LatoBlack;
+  font-size: 16.01px;
+  color: #305aa0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.parsley-errors-list li
+{
+	list-style: none;
+	text-align: left;
+	font-size: 13px;
+	color: red;
+	margin-top: -10px;
+	margin-bottom: -9px;
+	font-family: LatoRegular;
+
+}
+.parsley-errors-list
+{
+	margin: 0;
+}
+
+
+@media only screen and (max-width: 1725px)
+{
+	.right-absolute
+	{
+		right: 10px;
+	}
+	.left-absolute
+	{
+		left: 10px;
+	}
+
+}
+@media only screen and (max-width: 1470px)
+{
+	.left-absolute
+	{
+		display: none;
+	}
+}
+@media only screen and (max-width: 1400px)
+{
+	.right-absolute
+	{
+		display: none;
+	}
+}
+
+@media only screen and (max-width : 1200px)
+{
+	.headerSubTitle
+	{
+		font-size: 28px;
+	}
+	.headerTitle
+	{
+		font-size: 50px;
+	}
+	.headerInfoText
+	{
+		font-size: 18px;
+	}
+	.formBg
+	{
+		height: 400px;
+	}
+	.formTitle
+	{
+		font-size: 24px;
+	}
+	.formSubTitle
+	{
+		font-size: 16px;
+	}
+	input
+	{
+		height: 30px;
+    width: 250px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+	}
+	.parsley-errors-list li
+	{
+		font-size: 11px;
+		margin-top: -9px;
+		margin-bottom: -7px;
+	}
+	.center-absolute
+	{
+		display: none;
+	}
+	.contactBtn
+	{
+		font-size: 24px;
+	}
+	.headerPhone
+	{
+		font-size: 26px;
+	}
+	.phoneIcon
+	{
+		vertical-align: top;
+		margin-top: 10px;
+	}
+}
+
+@media only screen and (max-width : 992px)
+{
+	.headerTitle
+	{
+		font-size: 34px;
+	}
+	.headerSubTitle
+	{
+		font-size: 25px;
+		margin-right: 0;
+	}
+	.headerInfoText
+	{
+		font-size: 18px;
+	}
+	.formBg
+	{
+	  max-width: 500px;
+	  margin: auto;
+	  height: 586px;
+	}
+	.formTitleBg
+	{
+	  height: 120px;
+	}
+	.formTitle
+	{
+		font-size: 38.3px;
+line-height: 40px;
+margin-bottom: 9px;
+padding-top: 20px;
+
+	}
+	.formSubTitle
+	{
+	  font-size: 30px;
+		line-height: 30px;
+	}
+	input
+	{
+	  font-size: 20px;
+	  height: 50px;
+		width: 457px;
+		 margin: 10px auto;
+
+
+	}
+
+	.parsley-errors-list li
+	{
+
+		font-size: 18px;
+		margin-top: -14px;
+		margin-bottom: -13px;
+
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	.container
+	{
+		max-width: 100%;
+	}
+	.headerPhone
+	{
+		font-size: 20px;
+	}
+	.phoneIcon
+	{
+		margin-top: 7px;
+	}
+	.contactBtn
+	{
+		font-size: 16px;
+	}
+	.headerTitle
+	{
+		font-size: 50px;
+	}
+	.headerSubTitle
+	{
+		font-size: 25px;
+	}
+	.headerInfoText
+	{
+		font-size: 21px;
+	}
+	input
+	{
+		font-size: 20px;
+		height: 50px;
+		width: 430px;
+		 margin: 10px auto;
+
+
+	}
+	.formTitle
+ {
+	 font-size: 40px;
+ }
+ .formSubTitle
+ {
+	 font-size: 26	px;
+ }
+}
+
+@media only screen and (max-width : 480px) {
+	input
+	{
+		font-size: 20px;
+		height: 50px;
+		width: 380px;
+		 margin: 10px auto;
+	 }
+	 .formTitle
+	{
+		font-size: 35px;
+	}
+	.formSubTitle
+	{
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width : 428px)
+{
+	input
+	{
+		font-size: 20px;
+		height: 50px;
+		width: 320px;
+	 }
+	 .formTitle
+	 {
+		 font-size: 30px;
+	 }
+	 .formSubTitle
+	 {
+		 font-size: 16px;
+	 }
+}
+@media only screen and (max-width : 355px)
+{
+	input
+	{
+		font-size: 20px;
+		height: 50px;
+		width: 250px;
+	 }
+	 .formTitle
+	 {
+	 	font-size: 20px;
+	 }
+}
