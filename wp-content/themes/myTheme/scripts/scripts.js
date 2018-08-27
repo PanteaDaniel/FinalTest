@@ -36,24 +36,18 @@ function make_sticky() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
     content.classList.add("menupadd");
-    for(var i=0; i<activeItem.length; i++)
-    {
-      activeItem[i].classList.remove("active-absolute");
-      activeItem[i].classList.add("active-fixed");
-
-
-    }
+    activeItem[0].classList.remove("active-absolute");
+    activeItem[0].classList.add("active-fixed");
 
   } else {
 
     navbar.classList.remove("sticky");
     content.classList.remove("menupadd");
-    for(var i=0; i<activeItem.length; i++)
-    {
-      activeItem[i].classList.remove("active-fixed");
-      activeItem[i].classList.add("active-absolute");
 
-    }
+      activeItem[0].classList.remove("active-fixed");
+      activeItem[0].classList.add("active-absolute");
+
+
   }
 }
 
@@ -69,7 +63,7 @@ messages: {
 });
 window.Parsley.addValidator('phone', {
 validateString: function(value) {
-  var patt = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/g;
+  var patt = /^(\([0-9]{3}\) | [0-9]{3}-)[0-9]{3}-[0-9]{4}$/g;
   return patt.test(value);
 },
 messages: {
@@ -144,7 +138,7 @@ $(document).mouseup(function(e)
 });
 
 
-$(window).scroll(function() {
+/*$(window).scroll(function() {
    var hT = $('#sector1bg').offset().top,
        hH = $('#sector1bg').outerHeight(),
        wH = $(window).height(),
@@ -170,4 +164,24 @@ $(window).scroll(function() {
    if (wS > (hT+hH-wH)){
        makeActive('sect3');
    }
+});*/
+
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+$(window).on('resize scroll', function() {
+
+    if ($('#sector3bg').isInViewport())
+        makeActive('sect3');
+    if ($('#sector2bg').isInViewport())
+        makeActive('sect2');
+    if ($('#sector1bg').isInViewport())
+        makeActive('sect1');
 });

@@ -336,7 +336,61 @@ top: 0em;
 {
 	margin-top: 35px;
 }
+#navbar a {
+float: left;
+display: block;
+color: #776e6e;
+text-align: center;
+padding: 20px 26px;
+margin-left: 17px;
+margin-right: 17px;
+text-decoration: none;
+font-size: 20px;
+font-family: LatoSemibold;
 
+}
+#navbar a.active-fixed:after
+{
+position: fixed;
+}
+#navbar a.active-absolute:after
+{
+position: absolute;
+}
+#navbar a.active:after
+{
+content:'\f0d7';
+font-family:'Font Awesome\ 5 Free';
+font-weight: 900;
+font-size: 30px;
+display: block;
+margin-left: 22px;
+color: #1f6f99;
+}
+#navbar a:hover {
+background-color: #1f6f99;
+color: white;
+}
+#navbar a.active {
+background-color: #1f6f99;
+color: white;
+}
+/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: white;
+	z-index: 100;
+
+}
+
+
+
+.sticky {
+
+position: fixed;
+top: 0;
+width: 100%;
+}
 @media only screen and (max-width: 1725px)
 {
 	.right-absolute
@@ -426,53 +480,7 @@ top: 0em;
 	}
 
 }
-	#navbar a {
-  float: left;
-  display: block;
-  color: #776e6e;
-  text-align: center;
-  padding: 20px 26px;
-	margin-left: 17px;
-	margin-right: 17px;
-  text-decoration: none;
-  font-size: 20px;
-	font-family: LatoSemibold
-}
-#navbar a.active-fixed:after
-{
-	position: fixed;
-}
-#navbar a.active-absolute:after
-{
-	position: absolute;
-}
-#navbar a.active:after
-{
-	content:'\f0d7';
-  font-family:'Font Awesome\ 5 Free';
-	font-weight: 900;
-  font-size: 30px;
-	display: block;
-	margin-left: 22px;
-	color: #1f6f99;
-}
-#navbar a:hover {
-	background-color: #1f6f99;
-  color: white;
-}
-#navbar a.active {
-  background-color: #1f6f99;
-  color: white;
-}
 
-
-
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 .sector1TitleUnderline
 {
 	width: 195px;
@@ -805,6 +813,7 @@ top: 0em;
 	.sector4Title
 	{
 		font-size: 25px;
+		text-align: center;
 	}
 	.sector3Title
 	{
@@ -848,23 +857,59 @@ top: 0em;
 }
 .sector1ColumnTitle
 {
-		font-size: 15px;
+		font-size: 25px;
+}
+.sector1ColumnText
+{
+	font-size: 20px;
 }
 .sector1Text
 {
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 }
 .sector1ListTitle
 {
 	text-align: center;
+	font-size: 25px;
+	margin-bottom: 10px;
 }
 .sector1ListText
 {
-	text-align: center;
+	text-align: left;
+	font-size: 20px;
+	padding: 0 70px;
+}
+#popupContainer
+{
+	width: 80%;
 }
 }
-
+@media only screen and (max-width : 576px) {
+	.sector1FlexItem
+	{
+		max-width: 80%;
+	}
+	.headerLogo
+	{
+		max-width: 100%;
+		text-align: center;
+	}
+	.headerPhone
+	{
+		font-size: 20px;
+	}
+	.phoneIcon
+	{
+		margin-top: 4px;
+	}
+	.contactBtn
+	{
+		margin-top: 10px;
+		padding: 15px 20px;
+		font-size: 20px;
+	}
+}
 @media only screen and (max-width : 480px) {
 	input
 	{
@@ -892,6 +937,39 @@ top: 0em;
 	.headerTitle
 	{
 		font-size: 40px;
+	}
+	#navbar a
+	{
+		margin: 0;
+		font-size: 18px;
+		padding: 20px 10px;
+	}
+	.sector1ListText
+	{
+		padding: 0 0;
+		font-size: 18px;
+
+	}
+	.sector1ListTitle
+	{
+		font-size: 20px;
+	}
+	.sector1Text
+	{
+		font-size: 18px;
+	}
+	.sector1ColumnTitle
+	{
+		font-size: 20px;
+		margin: 0;
+	}
+	.sector1ColumnText
+	{
+		font-size: 18px;
+	}
+	.headerPhone
+	{
+		font-size: 16px;
 	}
 
 }
@@ -924,10 +1002,4 @@ top: 0em;
 	 {
 	 	font-size: 20px;
 	 }
-}
-/* Style the navbar */
-#navbar {
-  overflow: hidden;
-  background-color: white;
-
 }

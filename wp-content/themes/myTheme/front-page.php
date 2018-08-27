@@ -6,14 +6,14 @@
 		<div class="row">
 
 
-			<div class="col-sm-4 col-md-3 col-xl-2">
-				<a href="https://www.insegment.com/" target="_blank"><img class="" src="<?php the_field('header_logo') ?>" ></a>
+			<div class="col-sm-4 col-md-3 col-xl-2 text-center">
+				<a href="https://www.insegment.com/" target="_blank"><img class="headerLogo" src="<?php the_field('header_logo') ?>" ></a>
 			</div>
-			<div class="col-sm-4 offset-md-1 col-md-4 offset-lg-3 col-lg-3 offset-xl-6 col-xl-2 text-right phoneContainer">
+			<div class="  col-sm-4 offset-md-1 col-md-4 offset-lg-3 col-lg-3 offset-xl-6 col-xl-2 text-center text-sm-right phoneContainer">
 				<img class="phoneIcon" src="<?php the_field('phone_icon') ?>" >
 				<a href="tel:(617) 965-0800" class="inline headerPhone LBold"><?php the_field('phone_number') ?></a>
 			</div>
-			<div class="col-sm-4 col-md-4 col-lg-3 col-xl-2 text-right mt-1">
+			<div class=" col-sm-4 col-md-4 col-lg-3 col-xl-2 text-center text-sm-right mt-1">
 				<a href="#logoSlider" class="contactBtn LBlack" ><?php the_field('contact_button') ?></a>
 			</div>
 
@@ -78,7 +78,7 @@
           <img src="<?php the_field('sector1_column2_icon') ?>" />
           <p class="sector1ColumnTitle"><?php the_field('sector1_column2_title') ?></p>
           <div class="sector1ColumnTitleUnderline"></div>
-          <p class="sector1ColumnText pr-4 pl-4"><?php the_field('sector1_column2_text') ?></p>
+          <p class="sector1ColumnText pr-md-4 pl-md-4"><?php the_field('sector1_column2_text') ?></p>
         </div>
         <div class="sector1FlexItem mt-3 mt-lg-0">
           <img src="<?php the_field('sector1_column3_icon') ?>" />
@@ -90,7 +90,7 @@
           <img src="<?php the_field('sector1_column4_icon') ?>" />
           <p class="sector1ColumnTitle"><?php the_field('sector1_column4_title') ?></p>
           <div class="sector1ColumnTitleUnderline"></div>
-          <p class="sector1ColumnText pr-5 pl-5 pr-md-3 pl-md-3"><?php the_field('sector1_column4_text') ?></p>
+          <p class="sector1ColumnText pr-md-5 pl-md-5 pr-md-3 pl-md-3"><?php the_field('sector1_column4_text') ?></p>
         </div>
       </div>
       <p class="sector1Text"><?php the_field('sector1_text2')?></p>
